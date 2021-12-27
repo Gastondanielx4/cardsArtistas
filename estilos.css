@@ -12,12 +12,7 @@
     border-top: solid 4px rgba(78, 77, 77, 0.205);
     border-bottom: solid 4px rgba(78, 77, 77, 0.205);
     padding: 2rem;
-
-}
-@media screen and (max-width: 1826px){
-    .cards_artistas{
-        flex-wrap: wrap;
-    }    
+    flex-wrap: wrap;
 }
 .card_artista{
     height: 20rem;
