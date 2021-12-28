@@ -55,10 +55,26 @@ const arrayArtistas = [
     },
 
 ]
-
+const divPrincipal = document.querySelector('#cardsArtistas')
 let contador= 0;
+let crearHTML = ""
 
-for ( el of arrayArtistas){
+arrayArtistas.forEach(function(element){
+    contador ++
+    crearHTML += `
+    <div id="cardArtista${contador}" class="card_artista">
+        <img class="avatar" src="${element.avatar}" alt="">
+        <div id="caracteristicasArtista" class="caracteristica_artista">                            
+            <p class="nombre">${element.name}</p>
+            <p class="tipo_artista">${element.tipoArtista}</p>
+            <button class="boton">${element.textoBoton}</button>
+        </div>
+    </div>
+    `
+})
+divPrincipal.innerHTML = crearHTML;
+
+/* for ( el of arrayArtistas){
     contador++;
     
     const crearCardArtista = document.createElement("div")
@@ -110,8 +126,5 @@ for ( el of arrayArtistas){
     padreDeBoton.insertBefore(darBoton, actualNombre)
     const contenidoBoton = document.createTextNode(el.textoBoton);
     darBoton.appendChild(contenidoBoton);
-
-
-
-
 }
+*/
